@@ -17,25 +17,39 @@
                 <input type="text" placeholder="Nombre" class="form-control">
             </div>
             <div class="row">
+                <input type="tel" name="phone" id="phone" placeholder="Telefono" class="form-control">
+            </div>
+            <div class="row">
                 <div class="row" style="display: flex;">
-                    <div class="col-4">
-                        <label class="form-label">Fecha</label>
+                    <div class="col-8">
+                        <label for="datePick" class="form-label">Fecha</label>
                     </div>
                     <div class="col-4">
-                        <label for="arrivalcheck" class="form-check-label">Llegada</label>
-                        <input type="radio" name="arrivalCheck" id="arrivalCheck" class="form-check-input" checked>
-                    </div>
-                    <div class="col-4">
-                        <label for="departureCheck" class="form-check-label">Salida</label>
-                        <input type="radio" name="departureCheck" id="departureCheck" class="form-check-input">
+                        <label for="timePick" class="form-label">Hora</label>
                     </div>
                 </div>
-                <input type="date" name="datePick" id="datePick" class="form-control">
+                <div class="col-8">
+                    <input type="date" name="datePick" id="datePick" class="form-control">
+                </div>
+                <div class="col">
+                    <input type="time" name="timePick" id="timePick" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="arrivalcheck" class="form-check-label">Llegada</label>
+                    <input type="radio" name="arrivalCheck" id="arrivalCheck" class="form-check-input">
+                </div>
+                <div class="col-4">
+                    <label for="departureCheck" class="form-check-label">Salida</label>
+                    <input type="radio" name="departureCheck" id="departureCheck" class="form-check-input">
+                </div>
             </div>
             <div class="row">
                 <div class="col-8">
                     <label for="aero" class="form-label">Aerolinea</label>
                     <select name="aero" id="aero" class="form-select">
+                        <option value="" selected disabled hidden></option>
                         <option>American Airlines</option>
                         <option>Avianca</option>
                         <option>Iberia</option>
@@ -50,8 +64,9 @@
                 <div class="col-2">
                     <label># Pasajeros</label>
                 </div>
-                <div class="col-2">
+                <div class="col-4">
                     <select name="pax" id="pax" class="form-select">
+                        <option value="" selected disabled hidden></option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -76,7 +91,7 @@
                     <input type="radio" name="cc" id="cc" class="form-check-input">
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-md-center">
                 <input type="button" value="Submit" class="btn btn-primary">
             </div>
         </form>
