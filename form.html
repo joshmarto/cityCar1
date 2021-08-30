@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <style type="text/css">
+            body{
+                padding: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h3>Reservas City Car</h3>
+            <div class="row">
+                <input type="text" placeholder="Nombre" class="form-control">
+            </div>
+            <div class="row">
+                <div class="row" style="display: flex;">
+                    <div class="col-4">
+                        <label class="form-label">Fecha</label>
+                    </div>
+                    <div class="col-4">
+                        <label for="arrivalcheck" class="form-check-label">Llegada</label>
+                        <input type="radio" name="arrivalCheck" id="arrivalCheck" class="form-check-input" checked>
+                    </div>
+                    <div class="col-4">
+                        <label for="departureCheck" class="form-check-label">Salida</label>
+                        <input type="radio" name="departureCheck" id="departureCheck" class="form-check-input">
+                    </div>
+                </div>
+                <input type="date" name="datePick" id="datePick" class="form-control">
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <label for="aero" class="form-label">Aerolinea</label>
+                    <select name="aero" id="aero" class="form-select">
+                        <option>American Airlines</option>
+                        <option>Avianca</option>
+                        <option>Iberia</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="flight" class="form-label"># Vuelo</label>
+                    <input type="text" name="flight" id="flight" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <label># Pasajeros</label>
+                </div>
+                <div class="col-2">
+                    <select name="pax" id="pax" class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label class="form-label">Forma de pago</label>
+                </div>
+                <div class="col-2">
+                    <label class="form-label">Cash</label>
+                    <input type="radio" name="cash" id="cash" class="form-check-input">
+                </div>
+                <div class="col-2">
+                    <label class="form-label">CC</label>
+                    <input type="radio" name="cc" id="cc" class="form-check-input">
+                </div>
+            </div>
+            <div class="row">
+                <input type="button" value="Submit" class="btn btn-primary">
+            </div>
+        </form>
+    </body>
+</html>
