@@ -12,6 +12,7 @@
     </head>
     <body>
         <form>
+            <!-- <img src="./logo.jpeg" alt="City Car"> -->
             <h3>Reservas City Car</h3>
             <div class="row">
                 <input type="text" placeholder="Nombre" class="form-control">
@@ -61,8 +62,22 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-2">
-                    <label># Pasajeros</label>
+                <label for="service" class="form-label">Tipo de Servicio</label>
+                <select name="service" id="service" class="form-select">
+                    <option value="" selected disabled hidden></option>
+                    <option>Eco Class</option>
+                    <option>Business Class</option>
+                    <option>Premium</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col-4">
+                        <label># Pasajeros</label>
+                    </div>
+                    <div class="col-2">
+                        <label class="form-label">Forma de pago</label>
+                    </div>
                 </div>
                 <div class="col-4">
                     <select name="pax" id="pax" class="form-select">
@@ -80,9 +95,6 @@
                     </select>
                 </div>
                 <div class="col-2">
-                    <label class="form-label">Forma de pago</label>
-                </div>
-                <div class="col-2">
                     <label class="form-label">Cash</label>
                     <input type="radio" name="cash" id="cash" class="form-check-input">
                 </div>
@@ -91,9 +103,13 @@
                     <input type="radio" name="cc" id="cc" class="form-check-input">
                 </div>
             </div>
+            <div class="alert alert-primary" id="result">
+                Total a pagar:
+            </div>
             <div class="row justify-content-md-center">
-                <input type="button" value="Submit" class="btn btn-primary">
+                <input type="button" value="Reservar" class="btn btn-primary">
             </div>
         </form>
+        <script src="./main.js"></script>
     </body>
 </html>
