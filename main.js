@@ -26,6 +26,13 @@ function calcular() {
         price *= 1.1;
     }
     total = price * passengers;
-    result.innerHTML = `Total a pagar: <b>${total}</b>`;
-    submit.disabled = false;
+    result.innerHTML = `
+        Total a pagar: <b>${total}</b>
+        <input type="button" value="Ver precio" class="btn btn-success" id="btnPrecio" onclick="calcular();">
+    `;
+    if (total !== 0){
+        submit.disabled = false;
+    } else{
+        submit.disabled = true;
+    }
 }
