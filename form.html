@@ -4,6 +4,7 @@
         <title>Form</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style.css">
         <style type="text/css">
             body{
                 padding: 5%;
@@ -11,107 +12,111 @@
         </style>
     </head>
     <body>
-        <form>
-            <img src="./logo.jpeg" alt="City Car" style="width: 100%;">
-            <br><br>
-            <div class="row">
-                <input type="text" placeholder="Nombre" class="form-control">
-            </div>
-            <div class="row">
-                <input type="tel" name="phone" id="phone" placeholder="Telefono" class="form-control">
-            </div>
-            <div class="row">
-                <div class="row" style="display: flex;">
-                    <div class="col-8">
-                        <label for="datePick" class="form-label">Fecha</label>
-                    </div>
-                    <div class="col-4">
-                        <label for="timePick" class="form-label">Hora</label>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <input type="date" name="datePick" id="datePick" class="form-control">
-                </div>
-                <div class="col">
-                    <input type="time" name="timePick" id="timePick" class="form-control">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <label for="arrivalcheck" class="form-check-label">Llegada</label>
-                    <input type="radio" name="arrivalCheck" id="arrivalCheck" class="form-check-input">
-                </div>
-                <div class="col-4">
-                    <label for="departureCheck" class="form-check-label">Salida</label>
-                    <input type="radio" name="departureCheck" id="departureCheck" class="form-check-input">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-8">
-                    <label for="aero" class="form-label">Aerolinea</label>
-                    <select name="aero" id="aero" class="form-select">
-                        <option value="" selected disabled hidden></option>
-                        <option>American Airlines</option>
-                        <option>Avianca</option>
-                        <option>Iberia</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="flight" class="form-label"># Vuelo</label>
-                    <input type="text" name="flight" id="flight" class="form-control">
-                </div>
-            </div>
-            <div class="row">
-                <label for="service" class="form-label">Tipo de Servicio</label>
-                <select name="service" id="service" class="form-select">
-                    <option value="" selected disabled hidden></option>
-                    <option>Eco Class</option>
-                    <option>Business Class</option>
-                    <option>Premium</option>
-                </select>
-            </div>
-            <div class="row">
+        <div class="reserve-form">
+            <form action="https://formspree.io/f/xjvjjywv" method="POST">
+                <img src="./logo.jpeg" alt="City Car" style="width: 100%;">
+                <br><br>
                 <div class="row">
-                    <div class="col-6">
-                        <label class="form-label"># Pasajeros</label>
+                    <input type="text" placeholder="Nombre" class="form-control" name="Nombre" id="name">
+                </div>
+                <div class="row">
+                    <input type="tel" name="Telefono" id="phone" placeholder="Telefono" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="row" style="display: flex;">
+                        <div class="col-8">
+                            <label for="datePick" class="form-label">Fecha</label>
+                        </div>
+                        <div class="col-4">
+                            <label for="timePick" class="form-label">Hora</label>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <label class="form-label">Forma de pago</label>
+                    <div class="col-8">
+                        <input type="date" name="Fecha" id="datePick" class="form-control">
+                    </div>
+                    <div class="col">
+                        <input type="time" name="Hora" id="timePick" class="form-control">
                     </div>
                 </div>
-                <div class="col-6">
-                    <select name="pax" id="pax" class="form-select">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="arrivalcheck" class="form-check-label">Llegada</label>
+                        <input type="radio" name="LlegadaSalida" value="Llegada" id="arrivalCheck" class="form-check-input">
+                    </div> <br>
+                    <div class="col-4">
+                        <label for="departureCheck" class="form-check-label">Salida</label>
+                        <input type="radio" name="LlegadaSalida" value="Salida" id="departureCheck" class="form-check-input">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <label for="aero" class="form-label">Aerolinea</label>
+                        <select name="Aerolinea" id="aero" class="form-select">
+                            <option value="" selected disabled hidden></option>
+                            <option>American Airlines</option>
+                            <option>Avianca</option>
+                            <option>Iberia</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="flight" class="form-label"># Vuelo</label>
+                        <input type="text" name="Vuelo" id="flight" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="service" class="form-label">Tipo de Servicio</label>
+                    <select name="Servicio" id="service" class="form-select">
                         <option value="" selected disabled hidden></option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
+                        <option>Eco Class</option>
+                        <option>Business Class</option>
+                        <option>Premium</option>
                     </select>
                 </div>
-                <div class="col-2">
-                    <label class="form-label">Cash</label>
-                    <input type="radio" name="cash" id="cash" class="form-check-input">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="form-label"># Pasajeros</label>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label">Forma de pago</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <select name="Pasajeros" id="pax" class="form-select">
+                            <option value="" selected disabled hidden></option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label class="form-label">Cash</label>
+                        <input type="radio" name="Payment" id="cash" value="cash" class="form-check-input" checked>
+                    </div>
+                    <div class="col-2">
+                        <label class="form-label">CC</label>
+                        <input type="radio" name="Payment" id="cc" value="cc" class="form-check-input">
+                    </div>
                 </div>
-                <div class="col-2">
-                    <label class="form-label">CC</label>
-                    <input type="radio" name="cc" id="cc" class="form-check-input">
+                <div class="alert alert-primary" id="result">
+                    Total a pagar:
                 </div>
-            </div>
-            <div class="alert alert-primary" id="result">
-                Total a pagar:
-            </div>
-            <div class="row justify-content-md-center">
-                <input type="button" value="Reservar" class="btn btn-primary" id="btnSubmit">
-            </div>
-            <br>
-            <img src="./carros.jpg" alt="Services" style="width: 100%;">
-        </form>
+                <div class="row justify-content-md-center">
+                    <input type="button" value="Ver precio" class="btn btn-success" id="btnPrecio">
+                    <button type="submit" value="Reservar" class="btn btn-primary" id="btnSubmit" disabled>Reservar</button>
+                </div>
+                <br>
+                <img src="./carros.jpg" alt="Services" style="width: 100%;">
+            </form>
+        </div>
         <script src="./main.js"></script>
+        <script src="./reserve.js"></script>
     </body>
 </html>
