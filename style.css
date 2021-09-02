@@ -2,6 +2,7 @@
     margin: 5px;
 }
 
-.form-check-input{
-    margin: 5px 0 5px 0;
+.form-check-input, .row{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
