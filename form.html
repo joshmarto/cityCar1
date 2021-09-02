@@ -13,8 +13,7 @@
     </head>
     <body>
         <div class="reserve-form">
-            <form action="https://formspree.io/f/xjvjjywv" method="POST" >
-                <!-- action="https://formspree.io/f/xjvjjywv" method="POST" -->
+            <form action="https://formspree.io/f/xjvjjywv" method="POST">
                 <img src="./logo.jpeg" alt="City Car" style="width: 100%;">
                 <br><br>
                 <div class="row">
@@ -97,13 +96,15 @@
                             <option>10</option>
                         </select>
                     </div>
-                    <div class="col-2">
-                        <label class="form-label">Cash</label>
-                        <input type="radio" name="Payment" id="cash" value="cash" class="form-check-input" checked>
-                    </div>
-                    <div class="col-2">
-                        <label class="form-label">CC</label>
-                        <input type="radio" name="Payment" id="cc" value="cc" class="form-check-input">
+                    <div class="row">
+                        <div class="col-2">
+                            <label class="form-label">Cash</label>
+                            <input type="radio" name="Payment" id="cash" value="cash" class="form-check-input" checked>
+                        </div>
+                        <div class="col-2">
+                            <label class="form-label">CC</label>
+                            <input type="radio" name="Payment" id="cc" value="cc" class="form-check-input">
+                        </div>
                     </div>
                 </div>
                 <div class="alert alert-primary" id="result">
